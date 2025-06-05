@@ -42,5 +42,6 @@
 	</build>
 	<modules>
 		<module>01-class-mappings</module>
+		<module>02-field-mappings</module>
 	</modules>
 </project>

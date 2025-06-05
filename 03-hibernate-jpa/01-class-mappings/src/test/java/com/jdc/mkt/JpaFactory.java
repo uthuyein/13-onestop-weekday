@@ -9,6 +9,5 @@ public class JpaFactory {
 	@Test
 	void create() {
 		var emf = Persistence.createEntityManagerFactory("class-mappings");
-		var em = emf.createEntityManager();
 	}
 }
