@@ -64,7 +64,7 @@ public class PersonServiceImpl implements DbServiceInt<Person> {
 	}
 
 	@Override
-	public Person[] select() {
+	public Person[] select(Person person) {
 		try {
 			Connection con = getConnection();
 			Statement stmt = con.createStatement();
