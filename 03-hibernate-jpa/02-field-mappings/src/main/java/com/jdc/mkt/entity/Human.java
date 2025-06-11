@@ -25,8 +25,7 @@ public class Human {
 	
 	private String name;
 	private Type type;
-	
-	
+		
 	
 	public enum Type{
 		STUDENT,EMPLOYEE;
