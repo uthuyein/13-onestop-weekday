@@ -7,6 +7,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 
 @Data
@@ -21,6 +22,9 @@ public class Customer {
 	
 	@Enumerated(EnumType.STRING)
 	private Type memberType;
+	
+	@OneToOne(mappedBy = "customer")
+	private Address address;
 	
 	public enum Type{
 		SILVER,GOLD,DIAMOND
