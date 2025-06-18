@@ -15,7 +15,7 @@ import lombok.Data;
 @Data
 //@MappedSuperclass
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class Account {
 	@Id
 	@Column(length = 30)
@@ -32,6 +32,7 @@ public abstract class Account {
 	
 	private LocalDate createDateAt;
 	private LocalTime createTimeAt;
+	
 	
 	public enum AccountType{
 		EMPLOYEE,MANAGER,CUSTOMER
