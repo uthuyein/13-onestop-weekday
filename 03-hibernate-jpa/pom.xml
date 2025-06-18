@@ -47,5 +47,6 @@
 		<module>04-relationship-mappings</module>
 		<module>00-test-project</module>
 		<module>05-inheritance-mappings</module>
+		<module>06-entitymanager</module>
 	</modules>
 </project>
