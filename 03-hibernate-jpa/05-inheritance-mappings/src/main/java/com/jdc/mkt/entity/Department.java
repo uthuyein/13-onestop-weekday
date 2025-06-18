@@ -1,6 +1,11 @@
 package com.jdc.mkt.entity;
 
+import java.awt.Color;
+
+import com.jdc.mkt.entity.converters.ColorConverter;
+
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,8 +29,16 @@ public class Department {
 	@Column(nullable = false,unique = true,length = 30)
 	private  String name;
 	
-//	public Department (int id){
-//		this.id = id;
-//	}
-//
+	@Convert(converter = ColorConverter.class)
+	private Color color;
+
 	}
+
+
+
+
+
+
+
+
+

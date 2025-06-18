@@ -1,5 +1,6 @@
 package com.jdc.mkt.test;
 
+import java.awt.Color;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -14,8 +15,8 @@ import com.jdc.mkt.entity.Employee;
 public class AccountTest extends JpaFactory {
 	
 	@Test
-	@Order(2)
-	void accountTest() {
+	@Order(3)
+	void customerTest() {
 		
 		Customer cu = new Customer(MemberType.GOLD);
 		cu.setCreateDateAt(LocalDate.now());
@@ -23,6 +24,15 @@ public class AccountTest extends JpaFactory {
 		cu.setEmail("aungaung@gmail.com");
 		cu.setUsername("aungaung");
 		cu.setPassword("123");
+		cu.setValue("50");
+		
+		em.getTransaction().begin();
+		em.persist(cu);
+		em.getTransaction().commit();
+	}
+	@Test
+	@Order(2)
+	void employeeTest() {
 		
 		Employee emp = new Employee();
 		emp.setCreateDateAt(LocalDate.now());
@@ -31,8 +41,9 @@ public class AccountTest extends JpaFactory {
 		emp.setEmail("andrew@gmail.com");
 		emp.setUsername("andrew");
 		emp.setPassword("222");
+		emp.setValue("34");
+		
 		em.getTransaction().begin();
-		em.persist(cu);
 		em.persist(emp);
 		em.getTransaction().commit();
 	}
@@ -42,8 +53,16 @@ public class AccountTest extends JpaFactory {
 	void DepartmentTest() {
 		Department dep = new Department();
 		dep.setName("Services Team");
+		dep.setColor(Color.DARK_GRAY);
+		
 		em.getTransaction().begin();
 		em.persist(dep);
 		em.getTransaction().commit();
 	}
 }
+
+
+
+
+
+
