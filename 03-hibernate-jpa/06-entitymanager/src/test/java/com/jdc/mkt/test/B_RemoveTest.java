@@ -9,9 +9,10 @@ import org.junit.jupiter.api.Test;
 import com.jdc.mkt.entity.Category;
 import com.jdc.mkt.entity.Product;
 
-public class RemoveTest extends JpaFactory {
+public class B_RemoveTest extends JpaFactory {
 
 	@Test
+	//@Disabled
 	@Order(3)
 	void productListRemoveTest() {
 		// To be managed	

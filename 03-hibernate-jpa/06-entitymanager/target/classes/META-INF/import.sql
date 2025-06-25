@@ -7,3 +7,6 @@ insert into product(name,category_id,price)values('Durian',1,85000.00);
 
 insert into product(name,category_id,price)values('Salad',2,500.00);
 insert into product(name,category_id,price)values('Carrot',2,500.00);
+
+insert into account(username,balance) values ('Andrew',50000.00);
+insert into account(username,balance) values ('William',50000.00);

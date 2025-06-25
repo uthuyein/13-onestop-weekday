@@ -17,12 +17,12 @@ public  class JpaFactory {
 	static EntityManagerFactory emf;
 	EntityManager em;
 
-	@BeforeEach
+	//@BeforeEach
 	void createEm() {
 		em = emf.createEntityManager();
 	}
 
-	@AfterEach
+	//@AfterEach
 	void closeEm() {
 		if (null != em && em.isOpen())
 			em.close();
