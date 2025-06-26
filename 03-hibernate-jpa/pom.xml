@@ -48,5 +48,6 @@
 		<module>00-test-project</module>
 		<module>05-inheritance-mappings</module>
 		<module>06-entitymanager</module>
+		<module>07-query</module>
 	</modules>
 </project>

@@ -16,8 +16,8 @@ public class TripsPk implements Serializable{
 	@Column(name = "drivers_id")
 	private int driversId;
 	
-	@Column(name = "pessengers_id")
-	private int pessengersId;
+	@Column(name = "passengers_id")
+	private int passengersId;
 	
 	@Column(name = "payments_id")
 	private int paymentsId;

@@ -7,8 +7,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -20,16 +20,19 @@ public class Trips implements EnableTimesListener{
 	@EmbeddedId
 	private TripsPk id;
 	
-	@MapsId("driversId")
+	//@MapsId("driversId")
 	@ManyToOne
-	private Drivers dirvers;
+	@JoinColumn(insertable = false,updatable = false)
+	private Drivers drivers;
 	
-	@MapsId("pessengersId")
+	//@MapsId("pessengersId")
 	@ManyToOne
-	private Pessengers pessengers;
+	@JoinColumn(insertable = false,updatable = false)
+	private Passengers passengers;
 	
-	@MapsId("paymentsId")
+	//@MapsId("paymentsId")
 	@ManyToOne
+	@JoinColumn(insertable = false,updatable = false)
 	private Payments payments;
 	
 	@Column(nullable = false,length = 45)
