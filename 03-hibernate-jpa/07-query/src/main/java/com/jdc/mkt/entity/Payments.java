@@ -25,7 +25,7 @@ public class Payments implements EnableTimesListener{
 	private int id;
 	
 	@Enumerated(EnumType.STRING)
-	private PaymentType type;
+	private PaymentType paymentType;
 	
 	@Column(columnDefinition = "double default 1000.00")
 	private double amount;

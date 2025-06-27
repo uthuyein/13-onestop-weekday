@@ -1,0 +1,1 @@
+com.jdc.mkt.entity.Licences.BloodType com.jdc.mkt.entity.Licences.LicenceType 

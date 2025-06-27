@@ -3,12 +3,15 @@ package com.jdc.mkt.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.DynamicInsert;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.Data;
 
 @Data
 @Embeddable
+@DynamicInsert
 public class TripsPk implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -22,5 +25,6 @@ public class TripsPk implements Serializable{
 	@Column(name = "payments_id")
 	private int paymentsId;
 	
+	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private LocalDateTime tripAt;
 }

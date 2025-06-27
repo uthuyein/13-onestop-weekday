@@ -21,3 +21,26 @@ insert into drivers_tbl(id,name,gender,email,phone,addresses_id,licences_id)valu
 insert into drivers_tbl(id,name,gender,email,phone,addresses_id,licences_id)values(3,'SanSanOo','FEMALE','sansan@gmail.com','092121288',3,3);
 insert into drivers_tbl(id,name,gender,email,phone,addresses_id,licences_id)values(4,'Wanna','MALE','wanna@gmail.com','09542342',4,4);
 insert into drivers_tbl(id,name,gender,email,phone,addresses_id,licences_id)values(5,'Zarni','MALE','zarni@gmail.com','0988777434',5,5);
+
+insert into payments_tbl(id,amount,paymentType)values(1,5000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(2,15000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(3,20000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(4,7000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(5,6000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(6,8000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(7,95000,'WAVE');
+insert into payments_tbl(id,amount,paymentType)values(8,12000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(9,5000,'KPAY');
+insert into payments_tbl(id,amount,paymentType)values(10,5000,'KPAY');
+
+
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(1,1,1,'start from a','end to b');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(1,2,2,'start from a','end to c');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(1,2,3,'start from a','end to b');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(2,2,4,'start from b','end to c');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(3,3,5,'start from a','end to c');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(3,3,6,'start from a','end to d');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(4,2,7,'start from b','end to e');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(5,1,8,'start from a','end to f');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(5,1,9,'start from a','end to b');
+insert into trips_tbl(drivers_id,passengers_id,payments_id,startPoint,endPoint)values(1,5,10,'start from a','end to c');

@@ -1,5 +1,7 @@
 package com.jdc.mkt.entity;
 
+import org.hibernate.annotations.DynamicInsert;
+
 import com.jdc.mkt.listeners.EnableTimesListener;
 import com.jdc.mkt.listeners.Times;
 
@@ -15,6 +17,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "trips_tbl")
+@DynamicInsert
 public class Trips implements EnableTimesListener{
 
 	@EmbeddedId
