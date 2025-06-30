@@ -3,6 +3,7 @@ package com.jdc.mkt.entity;
 import com.jdc.mkt.entity.Drivers.Gender;
 import com.jdc.mkt.listeners.Times;
 import jakarta.persistence.metamodel.EntityType;
+import jakarta.persistence.metamodel.ListAttribute;
 import jakarta.persistence.metamodel.SingularAttribute;
 import jakarta.persistence.metamodel.StaticMetamodel;
 
@@ -12,6 +13,7 @@ public abstract class Drivers_ {
 	public static final String TIMES = "times";
 	public static final String ADDRESSES = "addresses";
 	public static final String GENDER = "gender";
+	public static final String TRIPS = "trips";
 	public static final String CONTACT = "contact";
 	public static final String NAME = "name";
 	public static final String ID = "id";
@@ -32,6 +34,11 @@ public abstract class Drivers_ {
 	 * @see com.jdc.mkt.entity.Drivers#gender
 	 **/
 	public static volatile SingularAttribute<Drivers, Gender> gender;
+	
+	/**
+	 * @see com.jdc.mkt.entity.Drivers#trips
+	 **/
+	public static volatile ListAttribute<Drivers, Trips> trips;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Drivers#contact

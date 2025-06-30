@@ -1,5 +1,7 @@
 package com.jdc.mkt.entity;
 
+import java.util.List;
+
 import com.jdc.mkt.listeners.EnableTimesListener;
 import com.jdc.mkt.listeners.Times;
 
@@ -12,6 +14,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.TableGenerator;
@@ -47,6 +50,9 @@ public class Drivers implements EnableTimesListener{
 			CascadeType.PERSIST,
 			CascadeType.MERGE})
 	private Licences licences;
+	
+	@OneToMany(mappedBy = "drivers")
+	private List<Trips> trips;
 	
 	public enum Gender {
 		MALE,FEMALE,OTHER

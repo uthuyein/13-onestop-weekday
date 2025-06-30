@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import com.jdc.mkt.entity.Drivers;
 import com.jdc.mkt.entity.Drivers.Gender;
+import com.jdc.mkt.entity.Drivers_;
 import com.jdc.mkt.test.A_JpaFactory;
 
 public class A_DriverTestByGender extends A_JpaFactory{
@@ -52,7 +53,7 @@ public class A_DriverTestByGender extends A_JpaFactory{
 		
 		cq.select(cb.count(root));
 		
-		cq.where(cb.equal(root.get("gender"), Gender.valueOf(gender)));
+		cq.where(cb.equal(root.get(Drivers_.gender), Gender.valueOf(gender)));
 		
 		var query = em.createQuery(cq);
 		

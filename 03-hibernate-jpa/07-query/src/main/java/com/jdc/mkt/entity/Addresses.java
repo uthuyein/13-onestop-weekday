@@ -7,9 +7,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
 
-@Data
+
 @Entity
 @Table(name = "addresses_tbl")
 @ExcludeDefaultListeners
@@ -27,4 +26,5 @@ public class Addresses {
 	
 	@Column(length = 60,nullable = false)
 	private String street;
+	
 }
