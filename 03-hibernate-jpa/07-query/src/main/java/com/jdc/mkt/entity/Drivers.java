@@ -13,7 +13,9 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -26,9 +28,9 @@ import lombok.Data;
 public class Drivers implements EnableTimesListener{
 
 	@Id
-	@GeneratedValue(generator = "table_gen_drivers_tbl")
-	@TableGenerator(name = "table_gen_drivers_tbl",initialValue = 1,allocationSize = 1)
-	private int id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "drivers_id")
+	private int driversId;
 	
 	@Column(nullable = false,length = 45)
 	private String name;
@@ -42,6 +44,7 @@ public class Drivers implements EnableTimesListener{
 	@Embedded
 	private Times times;
 	
+	@JoinColumn(name = "addresses_id")
 	@OneToOne(fetch = FetchType.LAZY,optional = true)
 	private Addresses addresses;
 	
@@ -49,6 +52,7 @@ public class Drivers implements EnableTimesListener{
 			cascade = {
 			CascadeType.PERSIST,
 			CascadeType.MERGE})
+	@JoinColumn(name = "licences_id")
 	private Licences licences;
 	
 	@OneToMany(mappedBy = "drivers")

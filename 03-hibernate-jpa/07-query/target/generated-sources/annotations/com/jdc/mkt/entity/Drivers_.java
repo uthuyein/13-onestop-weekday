@@ -13,10 +13,10 @@ public abstract class Drivers_ {
 	public static final String TIMES = "times";
 	public static final String ADDRESSES = "addresses";
 	public static final String GENDER = "gender";
+	public static final String DRIVERS_ID = "driversId";
 	public static final String TRIPS = "trips";
 	public static final String CONTACT = "contact";
 	public static final String NAME = "name";
-	public static final String ID = "id";
 	public static final String LICENCES = "licences";
 
 	
@@ -36,6 +36,11 @@ public abstract class Drivers_ {
 	public static volatile SingularAttribute<Drivers, Gender> gender;
 	
 	/**
+	 * @see com.jdc.mkt.entity.Drivers#driversId
+	 **/
+	public static volatile SingularAttribute<Drivers, Integer> driversId;
+	
+	/**
 	 * @see com.jdc.mkt.entity.Drivers#trips
 	 **/
 	public static volatile ListAttribute<Drivers, Trips> trips;
@@ -49,11 +54,6 @@ public abstract class Drivers_ {
 	 * @see com.jdc.mkt.entity.Drivers#name
 	 **/
 	public static volatile SingularAttribute<Drivers, String> name;
-	
-	/**
-	 * @see com.jdc.mkt.entity.Drivers#id
-	 **/
-	public static volatile SingularAttribute<Drivers, Integer> id;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Drivers

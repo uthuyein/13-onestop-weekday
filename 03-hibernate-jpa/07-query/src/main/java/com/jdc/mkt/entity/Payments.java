@@ -22,7 +22,8 @@ public class Payments implements EnableTimesListener{
 	@Id
 	@GeneratedValue(generator = "table_gen_payement_tbl")
 	@TableGenerator(name = "table_gen_payement_tbl",initialValue = 1,allocationSize = 1)
-	private int id;
+	@Column(name = "payments_id")
+	private int paymentId;
 	
 	@Enumerated(EnumType.STRING)
 	private PaymentType paymentType;

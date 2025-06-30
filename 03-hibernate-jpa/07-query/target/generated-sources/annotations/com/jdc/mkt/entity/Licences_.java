@@ -13,11 +13,11 @@ import java.util.UUID;
 public abstract class Licences_ {
 
 	public static final String TIMES = "times";
+	public static final String LICENCES_ID = "licencesId";
 	public static final String DOB = "dob";
 	public static final String VALID_DATE = "validDate";
 	public static final String LICENCE_NUMBER = "licenceNumber";
 	public static final String LICENCE_TYPE = "licenceType";
-	public static final String ID = "id";
 	public static final String ISSUE_DATE = "issueDate";
 	public static final String BLOOD_TYPE = "bloodType";
 	public static final String DRIVERS = "drivers";
@@ -27,6 +27,11 @@ public abstract class Licences_ {
 	 * @see com.jdc.mkt.entity.Licences#times
 	 **/
 	public static volatile SingularAttribute<Licences, Times> times;
+	
+	/**
+	 * @see com.jdc.mkt.entity.Licences#licencesId
+	 **/
+	public static volatile SingularAttribute<Licences, UUID> licencesId;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Licences#dob
@@ -47,11 +52,6 @@ public abstract class Licences_ {
 	 * @see com.jdc.mkt.entity.Licences#licenceType
 	 **/
 	public static volatile SingularAttribute<Licences, LicenceType> licenceType;
-	
-	/**
-	 * @see com.jdc.mkt.entity.Licences#id
-	 **/
-	public static volatile SingularAttribute<Licences, UUID> id;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Licences#issueDate

@@ -8,8 +8,8 @@ import jakarta.persistence.metamodel.StaticMetamodel;
 public abstract class Addresses_ {
 
 	public static final String STREET = "street";
-	public static final String ID = "id";
 	public static final String STATE = "state";
+	public static final String ADDRESSES_ID = "addressesId";
 	public static final String TOWNSHIP = "township";
 
 	
@@ -17,11 +17,6 @@ public abstract class Addresses_ {
 	 * @see com.jdc.mkt.entity.Addresses#street
 	 **/
 	public static volatile SingularAttribute<Addresses, String> street;
-	
-	/**
-	 * @see com.jdc.mkt.entity.Addresses#id
-	 **/
-	public static volatile SingularAttribute<Addresses, Integer> id;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Addresses#state
@@ -32,6 +27,11 @@ public abstract class Addresses_ {
 	 * @see com.jdc.mkt.entity.Addresses
 	 **/
 	public static volatile EntityType<Addresses> class_;
+	
+	/**
+	 * @see com.jdc.mkt.entity.Addresses#addressesId
+	 **/
+	public static volatile SingularAttribute<Addresses, Integer> addressesId;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Addresses#township

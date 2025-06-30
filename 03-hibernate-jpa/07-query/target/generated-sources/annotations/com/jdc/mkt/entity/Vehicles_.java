@@ -10,12 +10,17 @@ import java.util.UUID;
 @StaticMetamodel(Vehicles.class)
 public abstract class Vehicles_ {
 
+	public static final String VEHICLES_ID = "vehiclesId";
 	public static final String TIMES = "times";
 	public static final String SIZE = "size";
-	public static final String ID = "id";
 	public static final String CAR_LICENCE = "carLicence";
 	public static final String CAR_MODEL = "carModel";
 
+	
+	/**
+	 * @see com.jdc.mkt.entity.Vehicles#vehiclesId
+	 **/
+	public static volatile SingularAttribute<Vehicles, UUID> vehiclesId;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Vehicles#times
@@ -26,11 +31,6 @@ public abstract class Vehicles_ {
 	 * @see com.jdc.mkt.entity.Vehicles#size
 	 **/
 	public static volatile SingularAttribute<Vehicles, Size> size;
-	
-	/**
-	 * @see com.jdc.mkt.entity.Vehicles#id
-	 **/
-	public static volatile SingularAttribute<Vehicles, UUID> id;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Vehicles

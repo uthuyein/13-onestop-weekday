@@ -23,7 +23,8 @@ public class Vehicles implements EnableTimesListener {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID id;
+	@Column(name = "vehicles_id")
+	private UUID vehiclesId;
 	
 	@Column(nullable = false,length = 12,unique = true)
 	private String carLicence;

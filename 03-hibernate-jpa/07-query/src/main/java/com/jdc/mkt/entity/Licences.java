@@ -6,6 +6,7 @@ import java.util.UUID;
 import com.jdc.mkt.listeners.EnableTimesListener;
 import com.jdc.mkt.listeners.Times;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -24,7 +25,8 @@ public class Licences implements EnableTimesListener{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID id;
+	@Column(name = "licences_id")
+	private UUID licencesId;
 	
 	private LocalDate dob;
 	

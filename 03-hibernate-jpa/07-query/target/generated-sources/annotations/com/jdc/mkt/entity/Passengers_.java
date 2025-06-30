@@ -10,10 +10,10 @@ public abstract class Passengers_ {
 
 	public static final String QUERY_PASSENGERS_SELECT_ALL_PASSENGERS_BY_NAME_LIKE = "Passengers.selectAllPassengersByNameLike";
 	public static final String TIMES = "times";
+	public static final String PASSENGERS_ID = "passengersId";
 	public static final String QUERY_PASSENGERS_SELECT_ALL_PASSENGERS = "Passengers.selectAllPassengers";
 	public static final String CONTACT = "contact";
 	public static final String NAME = "name";
-	public static final String ID = "id";
 	public static final String QUERY_PASSENGERS_SELECT_ALL_PASSENGER_BY_NAME_EQUAL = "Passengers.selectAllPassengerByNameEqual";
 
 	
@@ -21,6 +21,11 @@ public abstract class Passengers_ {
 	 * @see com.jdc.mkt.entity.Passengers#times
 	 **/
 	public static volatile SingularAttribute<Passengers, Times> times;
+	
+	/**
+	 * @see com.jdc.mkt.entity.Passengers#passengersId
+	 **/
+	public static volatile SingularAttribute<Passengers, Integer> passengersId;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Passengers#contact
@@ -31,11 +36,6 @@ public abstract class Passengers_ {
 	 * @see com.jdc.mkt.entity.Passengers#name
 	 **/
 	public static volatile SingularAttribute<Passengers, String> name;
-	
-	/**
-	 * @see com.jdc.mkt.entity.Passengers#id
-	 **/
-	public static volatile SingularAttribute<Passengers, Integer> id;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Passengers

@@ -27,7 +27,8 @@ public class Passengers {
 	@Id
 	@GeneratedValue(generator = "table_gen_passenger_tbl")
 	@TableGenerator(name = "table_gen_passenger_tbl",initialValue = 5,allocationSize = 1)
-	private int id;
+	@Column(name = "passengers_id")
+	private int passengersId;
 	
 	@Column(nullable = false,length = 45)
 	private String name;

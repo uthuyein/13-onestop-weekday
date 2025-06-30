@@ -11,7 +11,7 @@ public abstract class Payments_ {
 
 	public static final String AMOUNT = "amount";
 	public static final String TIMES = "times";
-	public static final String ID = "id";
+	public static final String PAYMENT_ID = "paymentId";
 	public static final String PAYMENT_TYPE = "paymentType";
 
 	
@@ -26,9 +26,9 @@ public abstract class Payments_ {
 	public static volatile SingularAttribute<Payments, Times> times;
 	
 	/**
-	 * @see com.jdc.mkt.entity.Payments#id
+	 * @see com.jdc.mkt.entity.Payments#paymentId
 	 **/
-	public static volatile SingularAttribute<Payments, Integer> id;
+	public static volatile SingularAttribute<Payments, Integer> paymentId;
 	
 	/**
 	 * @see com.jdc.mkt.entity.Payments
